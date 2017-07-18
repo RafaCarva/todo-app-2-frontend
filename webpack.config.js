@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-    entry: './src/index.jsx'
+    entry: './src/index.jsx',
     output:{
         path: __dirname + 'public',
         filename: './app.js'
@@ -27,7 +27,7 @@ module.exports = {
             exclude: /node_modules/,
             query:{
                 presets:['es2015','react'],
-                plugins:['transform-object-rest-sprad']
+                plugins:['transform-object-rest-spread']
             }
         },{
             test:/\.css$/,
