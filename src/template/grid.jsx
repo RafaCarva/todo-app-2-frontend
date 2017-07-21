@@ -5,6 +5,7 @@
 import React,{Component} from 'react'
 
 export default class Grid extends Component{
+    
     toCssClasses(numbers){
         const cols = numbers ? numbers.split(' '):[]
         let classes = ''
@@ -17,6 +18,10 @@ export default class Grid extends Component{
         
         return classes    
     }
+
+    /* quem instanciar essa classe vai mandar um 'cols' na props 
+       isso vai virar esse 'numbers' que é esperado aqui:
+       <Grid cols='12 3 2'> pode ser mais de um número... */
     render(){
         {/*se cols não for setado, ai o valor será 12 */}
         const gridClasses = this.toCssClasses(this.props.cols || 12)
@@ -25,7 +30,6 @@ export default class Grid extends Component{
                 {this.props.children}
             </div>
         )
-
     }
 
 }
