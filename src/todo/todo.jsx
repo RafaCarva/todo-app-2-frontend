@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
 import PageHeader from '../template/pageHeader'
 
+{/*aqui se importa os componentes criados na aula 48*/}
+import TodoForm from './todoForm'
+import TodoList from './todoList'
+
 export default class Todo extends Component{
     render(){
         return(
             <div>
                 <PageHeader name='Tarefas' small='Cadastro'></PageHeader>
+                <TodoForm />
+                <TodoList />
             </div>
         )
-    }//render
-}//class
-
-{/**
- * pageHeader poderá usar os atributos passados ex:
- *   <h2>{props.name} <small>{props.small}</small></h2>
- */}
+    }
+}
