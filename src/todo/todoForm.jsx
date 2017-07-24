@@ -4,21 +4,19 @@ import IconButton from '../template/iconButton'
 
 export default props=>(
     <div role='form' className='todoForm'>
-        {/* antes, a linha era assim:
-            <div className='col-xs-12 col-sm-9 col-md-10'> */}
         <Grid cols='12 9 10'>
             <input id='description' className='form-control'
                 placeholder='Adicione uma tarefa'></input>
         </Grid>
 
         <Grid cols='12 3 2'>
-            {/*
-            antes, a linha era assim:
-            <button className='btn btn-primary'> 
-               <i className='fa fa-plus'></i>
-            </button>
-            */}
-            <IconButton style='primary' icon='plus'></IconButton>
+
+            {/* o src/template/iconButton recebe um onClick.
+            esse handleAdd é o nome da propriedade que vc inventou
+            (poderia ser qualquer nome.)*/}
+            <IconButton style='primary' icon='plus'
+                onClick={props.handleAdd}>
+            </IconButton>
         </Grid>    
     </div>
 )
