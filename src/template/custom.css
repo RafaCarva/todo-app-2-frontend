@@ -7,6 +7,14 @@
     color:#777;
 }
 
+.tableActions{
+    width:105px;
+}
+
+.todoForm{
+    padding-bottom:50px;
+}
+
 /*
 Esse css deve ser importado lá no src/main/app.jsx.
 */
